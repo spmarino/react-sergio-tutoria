@@ -1,15 +1,14 @@
 import React from 'react'
-import Counter from './Counter'
+
 import './item.css'
 
 function Item({product}) {
-    const {title, price, stock, initial} = product
+    const {title, price} = product
     return (
         <div class= "itemBox">
             <p>{title}</p>
             <p>Precio ${price}</p>
-            <Counter stock ={stock}  initial={initial}/>
-        </div>
+         </div>
     )
 }
 

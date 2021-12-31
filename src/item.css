@@ -8,3 +8,10 @@ margin: 10px;
 .itemContainer {
     display: flex;
 }
+
+.itemBox2{
+    width: 15%;
+border: 2px solid blue;
+padding:20px;
+margin: 10px;
+}
