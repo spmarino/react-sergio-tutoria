@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
 <h2>Hola mundo</h2>
-{/*<ItemListContainer />*/}
+<ItemListContainer />
 <ItemDetailContainer/>
     </div>
   );

@@ -23,24 +23,16 @@ function ItemDetailContainer() {
 
   useEffect(() => {
 
-    const item = productList.filter((product) => {
-      return product.id === +id;
-    });
-
-    const getItem = new Promise((resolve, reject) => {
-
-      if (item.length === 0) {
-        reject("No existe ese producto");
-      }
+    const getItem = new Promise((res, rej) => {
 
       setTimeout(() => {
-        resolve(item);
+        res(productList);
       }, 2000);
     });
 
     getItem
-      .then((product) => {
-        setProduct(product);
+      .then((res) => {
+        setProduct(res.find(product => product.id === id))
         setLoading(false);
       })
       .catch((err) => console.log(err));
@@ -59,9 +51,9 @@ function ItemDetailContainer() {
   if(loading === false){
     return (
       <>
-        {product.map((product) => (
-          <ItemDetail key={id} product={product} />
-        ))}
+        
+          <ItemDetail product={product} />
+        
       </>
     );
   }

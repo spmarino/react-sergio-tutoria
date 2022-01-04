@@ -1,16 +1,48 @@
 .itemBox{
-width: 15%;
-border: 2px solid red;
-padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+width: 12%;
+border: 2px solid gray;
+padding:0;
 margin: 10px;
+background-color:rgb(247, 244, 244);
+justify-content: center;
+}
+.itemBox h4{
+    width: 100%;
+    padding: 10px 5px ;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(231, 225, 225);
+}
+
+.itemBox p {
+    width: 100%;
+    text-align: center;
+}
+
+.itemBox Button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    border: 2px solid deepskyblue;
+    font-weight: bold;
+}
+
+.itemBox img {
+    width: 80%;
+    height: auto;
+    padding: 10px;
 }
 
 .itemContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .itemBox2{
-    width: 15%;
+width: 15%;
 border: 2px solid blue;
 padding:20px;
 margin: 10px;
