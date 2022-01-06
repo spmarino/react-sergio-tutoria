@@ -5,7 +5,7 @@ function Counter({ stock, initial }) {
   const [contador, setContador] = useState(initial);
 
   const aumentarContador = () => {
-    if (contador <= stock) setContador(contador + 1);
+    if (contador < stock) setContador(contador + 1);
   };
 
   const disminuirContador = () => {
@@ -14,15 +14,18 @@ function Counter({ stock, initial }) {
 
   return (
     <div>
-      <button type="button" onClick={aumentarContador}>
-        +
-      </button>
-      <button type="button" onClick={disminuirContador}>
+      <div className="Counter"> <button type="button" onClick={disminuirContador}>
         -
       </button>
+      <p className="Cantidad">Cantidad {contador}</p>
+     
+      <button type="button" onClick={aumentarContador}>
+        +
+      </button></div>
+  
 
-      <p>Cantidad {contador}</p>
-      <button>Agregar</button>
+      
+      <button>Agregar al Carrito</button>
 
     </div>
   );

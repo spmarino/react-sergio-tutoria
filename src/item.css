@@ -1,3 +1,6 @@
+
+/*Item Card*/
+
 .itemBox{
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +11,7 @@ margin: 10px;
 background-color:rgb(247, 244, 244);
 justify-content: center;
 }
-.itemBox h4{
+.itemBox h4, .itemBox2 h4{
     width: 100%;
     padding: 10px 5px ;
     margin: 0;
@@ -16,12 +19,12 @@ justify-content: center;
     background-color: rgb(231, 225, 225);
 }
 
-.itemBox p {
+.itemBox p, .itemBox2 p {
     width: 100%;
     text-align: center;
 }
 
-.itemBox Button {
+.itemBox Button, .itemBox2 Button {
     padding: 10px;
     margin: 10px;
     font-size: 15px;
@@ -29,7 +32,7 @@ justify-content: center;
     font-weight: bold;
 }
 
-.itemBox img {
+.itemBox img, .itemBox2 img {
     width: 80%;
     height: auto;
     padding: 10px;
@@ -41,9 +44,29 @@ justify-content: center;
     justify-content: center;
 }
 
+
+/*Item Detail*/
+.BoxCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .itemBox2{
+    display: flex;
+    flex-wrap: wrap;
 width: 15%;
-border: 2px solid blue;
-padding:20px;
+border: 2px solid gray;
+padding:0;
 margin: 10px;
+background-color:rgb(247, 244, 244);
+justify-content: center;
+}
+
+.Counter {
+    display: flex;
+    justify-content: center;
+}
+
+.Cantidad{
+    margin: 20px 0 0 0;
 }
