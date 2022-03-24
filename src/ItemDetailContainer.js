@@ -46,7 +46,7 @@ function ItemDetailContainer({productList}) {
     return (
       <div className="BoxCounter">
         
-          <ItemDetail product={product} />
+          <ItemDetail item={product} />
           {console.log(id)}
         
       </div>

@@ -3,6 +3,9 @@ import ItemListContainer from "./ItemListContainer";
 import Header from  './Header'
 import './header.css'
 import ItemDetailContainer from "./ItemDetailContainer";
+import Cart from './Cart'
+import { createContext } from "react";
+import CartContextProvider from "./CartContext";
 
 
 const productList = [
@@ -20,19 +23,22 @@ const productList = [
   {id: 12,title: "C30",stock: 9,initial: 3,price: 62,image: "/images/coupe.jpeg", category:"Coupe"}
 ];
 
+export const AppContext = createContext();
 
 function App() {
   return (
-   
+    <CartContextProvider>
       <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<ItemListContainer productList={productList}/>}/>
         <Route path="/category/:id" element={<ItemListContainer productList={productList}/>}/>
         <Route path="/product/:id" element={<ItemDetailContainer productList={productList}/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+
         </Routes>
 </BrowserRouter>
-    
+</CartContextProvider>
   );
 }
 
