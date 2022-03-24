@@ -1,6 +1,7 @@
 import {React, useState} from 'react'
 import {UseCartContext} from './CartContext'
 import CartItem from './CartItem'
+import './cart.css'
 
 const Cart = () => {
   const { CartList, EmptyCart, PriceTotal } = UseCartContext();
@@ -33,7 +34,7 @@ const Cart = () => {
                   ))}
                 </div>
               </div>
-              <button onClick={EmptyCart}>Empty Cart</button>
+              <button className="emptyCart"onClick={EmptyCart}>Empty Cart</button>
               <h2>Total: {PriceTotal()} U$D</h2>
             
             </div>
